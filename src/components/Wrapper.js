@@ -15,7 +15,6 @@ const Wrapper = (props) => {
       const data = await fetch(`${API_URL}${API_VERSION}quotes/random`)
       const res = await data.json()
 
-      console.log(res.data[0])
       setQuotes(res.data[0].quoteText)
       setAuthor(res.data[0].quoteAuthor)
       setIsLoading(false)
@@ -24,8 +23,15 @@ const Wrapper = (props) => {
     fetchData()
   }, [isLoading])
 
+  const fetchQuote = () => {
+    setIsLoading(true)
+  }
+
   return (
     <section>
+      {isLoading &&
+        <p>Loading Quote...</p>
+      }
       {!isLoading &&
         <figure>
           <blockquote>
@@ -34,8 +40,8 @@ const Wrapper = (props) => {
           <figcaption style={{textAlign: 'right'}}>— {author}</figcaption>
         </figure>
       }
-      {isLoading &&
-        <p>Loading...</p>
+      {!isLoading &&
+        <button style={{display: 'block', margin: '0 auto'}} onClick={fetchQuote}>Quote</button>
       }
     </section>
   )
