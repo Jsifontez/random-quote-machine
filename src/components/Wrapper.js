@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ButtonsContainer from './ButtonsContainer/ButtonsContainer'
 
 const Wrapper = (props) => {
   const [isLoading, setIsLoading] = useState(true)
@@ -41,17 +42,7 @@ const Wrapper = (props) => {
         </figure>
       }
       {!isLoading &&
-        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-          <a
-            className="twitter-share-button"
-            href={`https://twitter.com/intent/tweet?hashtags=quotes&text=🧐 "${quotes}". ${author}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Tweet
-          </a>
-          <button onClick={fetchQuote}>Quote</button>
-        </div>
+        <ButtonsContainer quotes={quotes} author={author} fetchQuote={fetchQuote}/>
       }
     </section>
   )
