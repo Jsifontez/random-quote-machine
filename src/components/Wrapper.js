@@ -37,11 +37,21 @@ const Wrapper = (props) => {
           <blockquote>
             <p>{quotes}</p>
           </blockquote>
-          <figcaption style={{textAlign: 'right'}}>— {author}</figcaption>
+          <figcaption style={{textAlign: 'right', marginRight: '40px'}}>— {author}</figcaption>
         </figure>
       }
       {!isLoading &&
-        <button style={{display: 'block', margin: '0 auto'}} onClick={fetchQuote}>Quote</button>
+        <div style={{display: 'flex', justifyContent: 'space-around'}}>
+          <a
+            className="twitter-share-button"
+            href={`https://twitter.com/intent/tweet?hashtags=quotes&text=🧐 "${quotes}". ${author}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Tweet
+          </a>
+          <button onClick={fetchQuote}>Quote</button>
+        </div>
       }
     </section>
   )
