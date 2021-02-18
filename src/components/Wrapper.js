@@ -7,6 +7,12 @@ const Wrapper = (props) => {
   const {quotes, author, isLoading, setIsLoading} = useFetch(url)
 
   const fetchQuote = () => {
+    setUrl('https://quote-garden.herokuapp.com/api/v3/quotes/random')
+    setIsLoading(true)
+  }
+
+  const fetchAuthorQuotes = () => {
+    setUrl(`https://quote-garden.herokuapp.com/api/v3/quotes?author=${author}&limit=10`)
     setIsLoading(true)
   }
 
@@ -22,7 +28,12 @@ const Wrapper = (props) => {
               <p key={quote._id}>{quote.quoteText}</p>
             ))}
           </blockquote>
-          <figcaption style={{textAlign: 'right', marginRight: '40px'}}>— {author}</figcaption>
+          <figcaption
+            style={{textAlign: 'right', marginRight: '40px', cursor:'pointer'}}
+            onClick={fetchAuthorQuotes}
+          >
+            — {author}
+          </figcaption>
         </figure>
       }
       {!isLoading &&

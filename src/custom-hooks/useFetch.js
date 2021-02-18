@@ -6,7 +6,7 @@ const useFetch = (url) => {
   const [author, setAuthor] = useState('')
 
   useEffect(() => {
-    if (isLoading === false ) return
+    if (!isLoading) return
 
     const fetchData = async () => {
       const data = await fetch(url)
