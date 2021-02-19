@@ -1,0 +1,4 @@
+.Wrapper {
+  width: min(650px, 95vw);
+  border-radius: .2em;
+}
