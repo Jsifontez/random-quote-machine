@@ -1,4 +1,38 @@
 .buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2.5em;
+  font-size: 16px;
+}
+
+.btn {
+  width: 8em;
+  height: 2.375cem;
+  border: none;
+  color: white;
+  padding: .5em 0;
+  cursor: pointer;
+  font-size: inherit;
+  border-radius: .2em;
+  background-color: purple;
+  box-sizing: border-box;
+  transition: .2s transform;
+}
+
+.btn:hover {
+  background-color: rebeccapurple;
+}
+
+.btn:active{
+  transform: scale(.9);
+  outline: none;
+}
+
+.btn:focus{
+  outline: rgb(174, 119, 230) .2em dotted;
+}
+
+.btn--tweet {
+  width: 2.5em;
+  text-decoration: none;
 }

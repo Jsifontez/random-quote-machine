@@ -5,14 +5,14 @@ const ButtonsContainer = ({ quotes, author, fetchQuote}) => {
   return (
     <div className="buttons">
       <a
-        className="twitter-share-button"
+        className="btn btn--tweet"
         href={`https://twitter.com/intent/tweet?hashtags=quotes&text=🧐 "${quotes}". ${author}`}
         target="_blank"
         rel="noreferrer"
       >
-        Tweet
+        T
       </a>
-      <button onClick={fetchQuote}>Quote</button>
+      <button onClick={fetchQuote} className="btn">New Quote</button>
     </div>
   )
 }

@@ -2,6 +2,10 @@
   margin: 0 1.25em 1em;
 }
 
+.quotes__wrapper {
+  margin-bottom: 1.8em;
+}
+
 .quote{
   margin-top: 0;
 }
