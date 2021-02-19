@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import ButtonsContainer from './ButtonsContainer/ButtonsContainer'
+import Quotes from './Quotes/Quotes'
 import useFetch from '../custom-hooks/useFetch'
+import './Wrapper.css'
 
 const Wrapper = (props) => {
   const [url, setUrl] = useState('https://quote-garden.herokuapp.com/api/v3/quotes/random')
@@ -17,27 +19,15 @@ const Wrapper = (props) => {
   }
 
   return (
-    <section>
+    <section className="Wrapper">
       {isLoading &&
-        <p>Loading Quote...</p>
+        <p style={{textAlign: 'center'}}>Loading Quote...</p>
       }
       {!isLoading &&
-        <figure>
-          <blockquote>
-            {quotes.map(quote => (
-              <p key={quote._id}>{quote.quoteText}</p>
-            ))}
-          </blockquote>
-          <figcaption
-            style={{textAlign: 'right', marginRight: '40px', cursor:'pointer'}}
-            onClick={fetchAuthorQuotes}
-          >
-            — {author}
-          </figcaption>
-        </figure>
-      }
-      {!isLoading &&
-        <ButtonsContainer quotes={quotes} author={author} fetchQuote={fetchQuote}/>
+        <>
+          <Quotes quotes={quotes} author={author} fetchAuthorQuotes={fetchAuthorQuotes} />
+          <ButtonsContainer quotes={quotes} author={author} fetchQuote={fetchQuote}/>
+        </>
       }
     </section>
   )
