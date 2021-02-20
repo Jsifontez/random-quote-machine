@@ -4,8 +4,37 @@
 
 .quotes__wrapper {
   margin-bottom: 1.8em;
+  text-align: center;
+}
+
+.quotes {
+  border-left: 2px solid purple;
+  padding-left: 50px;
+  position: relative;
+}
+
+.quotes > svg {
+  position: absolute;
+  left: 15px;
+  top: 0;
 }
 
 .quote{
   margin-top: 0;
+  font-weight: 500;
+  font-size: 1.75em;
+}
+
+
+.quote__right {
+  color: gray;
+  fill: currentColor;
+}
+
+.quotes__author {
+  font-size: 1.1em;
+  cursor: pointer;
+  text-align: right;
+  margin-right: 20px;
+  margin-right: 1.25em;
 }
