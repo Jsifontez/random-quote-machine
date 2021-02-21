@@ -18,7 +18,7 @@
   cursor: pointer;
   font-size: inherit;
   border-radius: .2em;
-  background-color: purple;
+  background-color: var(--main-color);
   box-sizing: border-box;
   transition: .2s transform;
 }
@@ -28,7 +28,7 @@ a.btn > svg {
 }
 
 .btn:hover {
-  background-color: rebeccapurple;
+  background-color: var(--light-color);
 }
 
 .btn:active{
@@ -37,7 +37,7 @@ a.btn > svg {
 }
 
 .btn:focus{
-  outline: rgb(174, 119, 230) .2em dotted;
+  outline: var(--light-color) .2em dotted;
 }
 
 .btn--tweet {

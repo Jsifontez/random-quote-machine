@@ -8,7 +8,7 @@
 }
 
 .quotes {
-  border-left: 2px solid purple;
+  border-left: 4px solid var(--light-color);
   padding-left: 50px;
   position: relative;
 }
@@ -17,6 +17,7 @@
   position: absolute;
   left: 15px;
   top: 0;
+  fill: var(--light-color);
 }
 
 .quote{
