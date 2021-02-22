@@ -33,14 +33,14 @@ const Wrapper = (props) => {
       {!isLoading &&
         <>
           <Quotes quotes={quotes} author={author} fetchAuthorQuotes={fetchAuthorQuotes} />
-          <ButtonsContainer
-            quotes={quotes}
-            author={author}
-            fetchQuote={fetchQuote}
-            isActive={isAuthorActive}
-          />
         </>
       }
+      <ButtonsContainer
+        quotes={quotes}
+        author={author}
+        fetchQuote={fetchQuote}
+        isActive={isAuthorActive}
+      />
     </section>
   )
 }

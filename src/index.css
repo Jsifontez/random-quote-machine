@@ -21,5 +21,6 @@ body {
   align-items: center;
   box-sizing: border-box;
   justify-content: center;
-  background-color: var(--main-color)
+  transition: background-color 1s;
+  background-color: var(--main-color);
 }

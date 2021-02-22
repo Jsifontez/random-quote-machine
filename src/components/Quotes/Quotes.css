@@ -8,15 +8,17 @@
 }
 
 .quotes {
-  border-left: 4px solid var(--light-color);
-  padding-left: 50px;
   position: relative;
+  padding-left: 50px;
+  transition: border-color 1s;
+  border-left: 4px solid var(--light-color);
 }
 
 .quotes > svg {
   position: absolute;
-  left: 15px;
   top: 0;
+  left: 15px;
+  transition: 1s fill;
   fill: var(--light-color);
 }
 

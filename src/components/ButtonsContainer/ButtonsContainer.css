@@ -18,9 +18,9 @@
   cursor: pointer;
   font-size: inherit;
   border-radius: .2em;
-  background-color: var(--main-color);
   box-sizing: border-box;
-  transition: .2s transform;
+  transition: .2s transform, background-color 1s;
+  background-color: var(--main-color);
 }
 
 a.btn > svg {
