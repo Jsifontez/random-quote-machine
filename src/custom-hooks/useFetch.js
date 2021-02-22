@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import changeVariables from '../utils/change-css-variables'
 
 const useFetch = (url) => {
   const [isLoading, setIsLoading] = useState(true)
@@ -18,6 +19,7 @@ const useFetch = (url) => {
     }
 
     fetchData()
+    changeVariables()
   }, [isLoading, url])
 
   return {quotes, author, isLoading, setIsLoading}
