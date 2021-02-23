@@ -6,8 +6,8 @@ function random(min, max) {
 const randomColors = () => {
   // select random hue, light and saturation
   const baseHue = random(0, 360)
-  const baseSat = random(40, 80)
-  const baseLight = random(15, 60)
+  const baseSat = random(55, 80)
+  const baseLight = random(15, 35)
 
   // assign colors using hsl() CSS function
   const mainColor = `hsl(${baseHue}, ${baseSat}%, ${baseLight}%)`
