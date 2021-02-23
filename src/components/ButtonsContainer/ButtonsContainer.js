@@ -3,8 +3,11 @@ import Twitter from '../Icons/Twitter'
 import './ButtonsContainer.css'
 
 const ButtonsContainer = ({ quote, author, fetchQuote, isActive}) => {
+  let isQuoteLength = quote.length ? '' :  'buttons--centered'
+  let isCentered = isActive ? isQuoteLength : 'buttons--centered'
+
   return (
-    <div className={`buttons ${isActive ? '' : 'buttons--centered'}`}>
+    <div className={`buttons ${isCentered}`}>
       {isActive && quote.length > 0 &&
         <a
           className="btn btn--tweet"
