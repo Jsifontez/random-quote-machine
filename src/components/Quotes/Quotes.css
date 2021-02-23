@@ -41,3 +41,19 @@
   margin-right: 20px;
   margin-right: 1.25em;
 }
+
+@media (width < 600px) {
+  .quotes__wrapper {
+    margin: 0 0 1em;
+  }
+  .quotes {
+    padding-left: 38px;
+    margin: 0 .625em 1em;
+  }
+  .quotes > svg {
+    left: 7.5px;
+  }
+  .quote {
+    font-size: 1.25em;
+  }
+}
