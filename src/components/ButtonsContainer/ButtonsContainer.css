@@ -19,7 +19,7 @@
   font-size: inherit;
   border-radius: .2em;
   box-sizing: border-box;
-  transition: .2s transform, background-color 1s;
+  transition: .2s transform, background-color .7s;
   background-color: var(--main-color);
 }
 
