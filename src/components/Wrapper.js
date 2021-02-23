@@ -36,7 +36,7 @@ const Wrapper = (props) => {
         </>
       }
       <ButtonsContainer
-        quotes={quotes}
+        quote={quotes[0].quoteText}
         author={author}
         fetchQuote={fetchQuote}
         isActive={isAuthorActive}

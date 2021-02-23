@@ -3,7 +3,7 @@ import changeVariables from '../utils/change-css-variables'
 
 const useFetch = (url) => {
   const [isLoading, setIsLoading] = useState(true)
-  const [quotes, setQuotes] = useState([])
+  const [quotes, setQuotes] = useState([{quoteText: ''}])
   const [author, setAuthor] = useState('')
 
   useEffect(() => {

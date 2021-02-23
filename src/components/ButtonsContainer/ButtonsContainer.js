@@ -2,13 +2,13 @@ import React from 'react'
 import Twitter from '../Icons/Twitter'
 import './ButtonsContainer.css'
 
-const ButtonsContainer = ({ quotes, author, fetchQuote, isActive}) => {
+const ButtonsContainer = ({ quote, author, fetchQuote, isActive}) => {
   return (
     <div className={`buttons ${isActive ? '' : 'buttons--centered'}`}>
-      {isActive &&
+      {isActive && quote.length > 0 &&
         <a
           className="btn btn--tweet"
-          href={`https://twitter.com/intent/tweet?hashtags=quotes&text=🧐 "${quotes}". ${author}`}
+          href={`https://twitter.com/intent/tweet?hashtags=quotes&text=🧐 "${quote}". ${author}`}
           target="_blank"
           rel="noreferrer"
         >
