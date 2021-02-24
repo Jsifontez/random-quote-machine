@@ -3,6 +3,7 @@ import ButtonsContainer from './ButtonsContainer/ButtonsContainer'
 import Quotes from './Quotes/Quotes'
 import useFetch from '../custom-hooks/useFetch'
 import './Wrapper.css'
+import { motion } from 'framer-motion'
 
 const Wrapper = (props) => {
   const [url, setUrl] = useState('https://quote-garden.herokuapp.com/api/v3/quotes/random')
@@ -26,7 +27,10 @@ const Wrapper = (props) => {
   }
 
   return (
-    <section className="Wrapper">
+    <motion.section className="Wrapper"
+      initial={{ right: '50vw', opacity: 0}}
+      animate={{ right: 0, opacity: 1}}
+    >
       {isLoading &&
         <p style={{textAlign: 'center'}}>Loading Quote...</p>
       }
@@ -41,7 +45,7 @@ const Wrapper = (props) => {
         fetchQuote={fetchQuote}
         isActive={isAuthorActive}
       />
-    </section>
+    </motion.section>
   )
 }
 
