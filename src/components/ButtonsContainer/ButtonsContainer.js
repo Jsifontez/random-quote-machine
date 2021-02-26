@@ -1,6 +1,13 @@
 import React from 'react'
 import Twitter from '../Icons/Twitter'
 import './ButtonsContainer.css'
+import { motion } from 'framer-motion'
+
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 60
+};
 
 const ButtonsContainer = ({ quote, author, fetchQuote, isActive}) => {
   let isQuoteLength = quote.length ? '' :  'buttons--centered'
@@ -18,7 +25,12 @@ const ButtonsContainer = ({ quote, author, fetchQuote, isActive}) => {
           <Twitter color="white" size="19px"/>
         </a>
       }
-      <button onClick={fetchQuote} className="btn">New Quote</button>
+      <motion.button onClick={fetchQuote} className="btn"
+        layout
+        transition={spring}
+      >
+        New Quote
+      </motion.button>
     </div>
   )
 }
