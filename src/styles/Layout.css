@@ -1,5 +1,5 @@
 .layout {
-  height: 100%;
+  grid-row: 1/2;
   padding: 1.5em 0;
   border-radius: .3em;
   background-color: white;
