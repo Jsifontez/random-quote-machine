@@ -1,0 +1,34 @@
+.footer {
+  height: 50px;
+  color: white;
+  font-size: .9em;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.footer > p {
+  margin: 0
+}
+
+.footer > p:first-child {
+  margin: 0 0 5px;
+}
+
+.footer > p > a {
+  padding: 0 5px;
+  font-weight: bold;
+  border-radius: .2em;
+  text-decoration: none;
+  color: var(--main-color);
+  background-color: white;
+  transition: .4s background-color;
+}
+
+.footer > p > a:hover {
+  color: white;
+  background-color: var(--light-color);
+}
+
+.footer > p > a:focus {
+  outline: 1px dotted var(--light-color);
+}
