@@ -4,6 +4,7 @@ import Quotes from './Quotes/Quotes'
 import useFetch from '../custom-hooks/useFetch'
 import './Wrapper.css'
 import { motion } from 'framer-motion'
+import Spinner from './Spinner/Spinner'
 
 const Wrapper = (props) => {
   const [url, setUrl] = useState('https://quote-garden.herokuapp.com/api/v3/quotes/random')
@@ -32,7 +33,7 @@ const Wrapper = (props) => {
       animate={{ right: 0, opacity: 1}}
     >
       {isLoading &&
-        <p style={{textAlign: 'center'}}>Loading Quote...</p>
+        <Spinner />
       }
       {!isLoading &&
         <>
