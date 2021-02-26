@@ -12,8 +12,9 @@ const randomColors = () => {
   // assign colors using hsl() CSS function
   const mainColor = `hsl(${baseHue}, ${baseSat}%, ${baseLight}%)`
   const lightColor = `hsl(${baseHue}, ${baseSat-35}%, ${baseLight+35}%)`
+  const darkColor = `hsl(${baseHue}, ${baseSat+40}%, ${baseLight-8}%)`
 
-  return [mainColor, lightColor]
+  return [mainColor, lightColor, darkColor]
 }
 
 export default randomColors

@@ -6,6 +6,7 @@ const changeVariables = () => {
   // set the colors of CSS variable
   document.documentElement.style.setProperty("--main-color", colors[0])
   document.documentElement.style.setProperty("--light-color", colors[1])
+  document.documentElement.style.setProperty("--dark-color", colors[2])
 }
 
 export default changeVariables

@@ -24,11 +24,17 @@
   transition: .4s background-color;
 }
 
-.footer > p > a:hover {
+.footer > p > a:hover,
+.footer > p > a:visited:hover {
   color: white;
   background-color: var(--light-color);
 }
 
 .footer > p > a:focus {
   outline: 1px dotted var(--light-color);
+}
+
+.footer > p > a:visited {
+  color: white;
+  background-color: var(--dark-color);
 }
