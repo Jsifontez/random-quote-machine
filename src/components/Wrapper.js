@@ -36,9 +36,7 @@ const Wrapper = (props) => {
         <Spinner />
       }
       {!isLoading &&
-        <>
-          <Quotes quotes={quotes} author={author} fetchAuthorQuotes={fetchAuthorQuotes} />
-        </>
+        <Quotes quotes={quotes} author={author} fetchAuthorQuotes={fetchAuthorQuotes} />
       }
       <ButtonsContainer
         quote={quotes[0].quoteText}
