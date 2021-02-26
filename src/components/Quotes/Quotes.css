@@ -40,6 +40,7 @@
   text-align: right;
   margin-right: 20px;
   margin-right: 1.25em;
+  color: var(--dark-color);
 }
 
 @media (width < 600px) {
