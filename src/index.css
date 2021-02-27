@@ -23,5 +23,5 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-rows: minmax(89vh, 1fr) 50px;
+  grid-template-rows: minmax(80vh, 1fr) 50px;
 }
