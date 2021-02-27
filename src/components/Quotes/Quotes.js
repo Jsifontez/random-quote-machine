@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const quotesWrapperVariants = {
   hidden: {
     opacity: 0,
-    x: '40vw'
+    x: '10vw'
   },
   visible: {
     opacity: 1,
@@ -20,7 +20,7 @@ const quotesWrapperVariants = {
 
 const quoteVariants = {
   hidden: {
-    x: '20vw',
+    x: '8vw',
     opacity: 0
   },
   visible: {
