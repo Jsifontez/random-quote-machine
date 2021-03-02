@@ -5,6 +5,7 @@ const useFetch = (url) => {
   const [isLoading, setIsLoading] = useState(true)
   const [quotes, setQuotes] = useState([{quoteText: ''}])
   const [author, setAuthor] = useState('')
+  const [genre, setGenre] = useState('')
 
   useEffect(() => {
     if (!isLoading) return
@@ -15,6 +16,7 @@ const useFetch = (url) => {
 
       setQuotes([...res.data])
       setAuthor(res.data[0].quoteAuthor)
+      setGenre(res.data[0].quoteGenre)
       setIsLoading(false)
     }
 
@@ -22,7 +24,7 @@ const useFetch = (url) => {
     changeVariables()
   }, [isLoading, url])
 
-  return {quotes, author, isLoading, setIsLoading}
+  return {quotes, author, genre, isLoading, setIsLoading}
 }
 
 export default useFetch

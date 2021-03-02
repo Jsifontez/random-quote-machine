@@ -29,7 +29,7 @@ const quoteVariants = {
   }
 }
 
-const Quotes = ({ quotes, author, fetchAuthorQuotes }) => {
+const Quotes = ({ quotes, author, genre, fetchAuthorQuotes }) => {
   return (
     <motion.figure className="quotes__wrapper"
       variants={quotesWrapperVariants}
@@ -51,6 +51,8 @@ const Quotes = ({ quotes, author, fetchAuthorQuotes }) => {
         onClick={fetchAuthorQuotes}
       >
         — {author}
+        <br />
+        <small><em>{genre}</em></small>
       </figcaption>
     </motion.figure>
   )

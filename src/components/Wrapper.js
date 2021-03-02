@@ -8,7 +8,7 @@ import Spinner from './Spinner/Spinner'
 
 const Wrapper = (props) => {
   const [url, setUrl] = useState('https://quote-garden.herokuapp.com/api/v3/quotes/random')
-  const {quotes, author, isLoading, setIsLoading} = useFetch(url)
+  const {quotes, author, genre, isLoading, setIsLoading} = useFetch(url)
   const [isAuthorActive, setIsAuthorActive] = useState(true)
 
   const fetchQuote = () => {
@@ -36,7 +36,12 @@ const Wrapper = (props) => {
         <Spinner />
       }
       {!isLoading &&
-        <Quotes quotes={quotes} author={author} fetchAuthorQuotes={fetchAuthorQuotes} />
+        <Quotes
+          quotes={quotes}
+          author={author}
+          genre={genre}
+          fetchAuthorQuotes={fetchAuthorQuotes}
+        />
       }
       <ButtonsContainer
         quote={quotes[0].quoteText}
