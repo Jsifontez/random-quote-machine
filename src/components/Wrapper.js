@@ -12,8 +12,11 @@ const Wrapper = (props) => {
   const [isAuthorActive, setIsAuthorActive] = useState(true)
 
   const fetchQuote = () => {
+    if (!isAuthorActive && isLoading) return
+
     setUrl('https://quote-garden.herokuapp.com/api/v3/quotes/random')
     setIsLoading(true)
+
     if (!isAuthorActive) {
       setIsAuthorActive(true)
     }
