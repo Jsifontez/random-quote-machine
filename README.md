@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Random Quote Generator</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/plX2U2ClTnD4g6pgxvF8">
       Solution
     </a>
     <span> | </span>
@@ -86,6 +86,6 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](http://juansifontez.netlify.app/)
-- GitHub [@your-username](https://github.com/jsifontez)
-- Twitter [@your-twitter](https://twitter.com/jsifontez_)
+- Website [Juan Sifontez Portfolio](http://juansifontez.com/)
+- GitHub [@jsifontez](https://github.com/jsifontez)
+- Twitter [@jsifontez_](https://twitter.com/jsifontez_)
